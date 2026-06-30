@@ -1,0 +1,16 @@
+# Privacy: never commit survey exports, members' answers, or rendered cards.
+*.csv
+*.tsv
+cards-source/
+*-cards/
+*-小红书卡片/
+out/
+_cards.html
+*.png
+
+# Python / OS cruft
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store

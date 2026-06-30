@@ -1,0 +1,62 @@
+/* WoMen AI Lab — 小红书卡片视觉系统
+   画布 1080x1440，导出 2x（2160x2880）。改色/改间距集中在这里。
+   尺寸面向手机阅读：字偏大、页边距偏小。 */
+:root{
+  --bg:#1D1D1F;
+  --mint:#5CC8A4;
+  --beige:#F4EFE9;
+  --beige-dim:#BFB8AC;
+  --line:#2e2e30;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#2a2a2a;
+  display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0;
+  font-family:'Helvetica Neue','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+}
+.card{
+  position:relative;width:1080px;height:1440px;background:var(--bg);
+  padding:64px 56px;overflow:hidden;display:flex;flex-direction:column;
+}
+.top-bar{position:absolute;top:0;left:0;right:0;height:6px;background:var(--mint);}
+.header{display:flex;justify-content:space-between;align-items:baseline;position:relative;z-index:2;}
+.brand{font-size:31px;font-weight:700;color:#fff;letter-spacing:0.5px;}
+.brand .ai{color:var(--mint);}
+.header-right{font-size:26px;color:var(--beige-dim);font-weight:500;}
+.header-right .date{color:var(--mint);font-weight:700;}
+.divider{height:1px;background:var(--line);margin-top:24px;position:relative;z-index:2;}
+.footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;}
+.footer-left{display:flex;align-items:center;gap:12px;font-size:25px;color:var(--beige-dim);}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--mint);display:inline-block;}
+.footer-right{font-size:25px;color:var(--beige-dim);letter-spacing:1px;}
+.wm{position:absolute;right:-26px;bottom:-120px;font-size:400px;font-weight:800;color:var(--mint);opacity:0.06;line-height:1;z-index:1;pointer-events:none;}
+.body{flex:1;display:flex;flex-direction:column;position:relative;z-index:2;}
+.tag{color:var(--mint);font-size:28px;letter-spacing:5px;font-weight:600;}
+/* cover */
+.cover-body{justify-content:center;}
+.cover-title{font-size:116px;font-weight:800;line-height:1.16;color:#fff;margin-top:24px;}
+.cover-title .g{color:var(--mint);}
+.cover-sub{font-size:47px;color:var(--beige-dim);margin-top:42px;line-height:1.48;font-weight:400;}
+.swipe{margin-top:38px;font-size:30px;color:var(--mint);letter-spacing:2px;}
+/* middle */
+.mid-tag{margin-top:28px;}
+.mid-title{font-size:58px;font-weight:700;line-height:1.28;color:#fff;margin-top:26px;}
+.mid-title .g{color:var(--mint);}
+.mid-body{font-size:42px;line-height:1.6;color:var(--beige);margin-top:34px;font-weight:400;}
+.mid-body .g{color:var(--mint);}
+.mid-body-2{font-size:39px;line-height:1.58;color:var(--beige-dim);margin-top:22px;font-weight:400;}
+.mid-body-2 .g{color:var(--mint);}
+.mlist{margin-top:24px;}
+.mlist .li{font-size:41px;line-height:1.5;color:var(--beige);margin-bottom:14px;padding-left:38px;position:relative;}
+.mlist .li:before{content:'';position:absolute;left:0;top:20px;width:16px;height:16px;border-radius:50%;background:var(--mint);opacity:0.85;}
+.short-line{width:64px;height:5px;background:var(--mint);margin-top:36px;border-radius:2px;}
+.sec-title{font-size:23px;letter-spacing:3px;font-weight:700;color:#fff;margin-top:26px;text-transform:uppercase;}
+.sec-title .g{color:var(--mint);}
+.sec-body{font-size:42px;line-height:1.55;font-weight:700;color:#fff;margin-top:16px;}
+.sec-body .g{color:var(--mint);}
+/* end */
+.end-block-title{font-size:26px;letter-spacing:4px;color:var(--mint);font-weight:700;margin-top:26px;text-transform:uppercase;}
+.end-block-body{font-size:39px;line-height:1.58;color:var(--beige);margin-top:20px;font-weight:400;}
+.end-block-body .g{color:var(--mint);font-weight:600;}
+.end-line{width:64px;height:5px;background:var(--mint);margin-top:40px;border-radius:2px;}
+.end-cta{font-size:33px;color:var(--beige-dim);margin-top:40px;line-height:1.5;}
